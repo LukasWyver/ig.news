@@ -4,15 +4,15 @@
 
 @layer components {
   body {
-    @apply bg-gray-900 text-white;
+    @apply dark:bg-gray-900 dark:text-white text-gray-900 bg-white;
   }
 
   header nav .menu{
-    @apply inline-block relative px-2 h-20 leading-[5rem] ml-8 first:ml-0 text-gray-300 hover:text-white transition-colors duration-200;
+    @apply inline-block relative px-2 h-20 leading-[5rem] ml-8 first:ml-0 text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200;
   }
 
   header nav .menu.active{
-    @apply text-white font-bold;
+    @apply dark:text-white text-gray-900 font-bold;
   }
 
   header nav .menu.active::after{
