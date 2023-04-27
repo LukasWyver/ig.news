@@ -1,5 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
+// JWT (Storage)
+// Next Auth (Social)
+// Cognito, Auth0
+
 export default function handler (request: NextApiRequest, response: NextApiResponse) {
   const users = [
     { id: 1, name: 'Diego' },
