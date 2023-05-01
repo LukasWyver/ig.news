@@ -22,14 +22,13 @@ export default function Post({ post }: PostProps) {
       </Head>
 
       <main className="max-w-[1120px] mx-auto px-8">
-        <article className="max-w-[720px] mx-auto mt-20">
-          <h1 className='text-[3.375rem] leading-[3.75rem] font-black text-gray-900 dark:text-white space-y-6'>{post.title}</h1>
+        <article className="max-w-[720px] mx-auto my-20">
+          <h1 className='text-4xl sm:text-5xl lg:text-[3.375rem] leading-[2.75rem] sm:leading-[3.25rem] lg:leading-[3.75rem] font-black text-gray-900 dark:text-white space-y-6'>{post.title}</h1>
           <time className='text-base text-gray-700 dark:text-gray-100 mt-6 block'>{post.updatedAt}</time>
 
           <div
-            id="post__content"
             dangerouslySetInnerHTML={{ __html: post.content }}
-            className="mt-8 text-lg leading-8 text-gray-500 dark:text-gray-300 space-y-6"
+            className="post__content"
           />
         </article>
       </main>
@@ -44,7 +43,7 @@ export const getServerSideProps: GetServerSideProps = async ({
   const session = await getSession({ req });
   const { slug } = params;
 
-  if(!session.activeSubscription){
+  if(!session?.activeSubscription){
     return {
       redirect: {
         destination: '/',

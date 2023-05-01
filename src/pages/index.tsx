@@ -32,10 +32,10 @@ export default function Home({ product }: HomeProps) {
       <Head>
         <title>Início | ig.news</title>
       </Head>
-      <main className={`${roboto.className} mx-auto px-8 h-screen -mt-20 max-w-[1120px] flex items-center justify-between`}>
-        <section className='max-w-[600px]'>
+      <main className={`${roboto.className} mx-auto px-8 h-screen lg:-mt-20 max-w-[1120px] flex flex-col lg:flex-row items-center justify-between`}>
+        <section className='max-w-[600px] max-lg:mt-20'>
           <span className='text-base font-bold'>👏 Hey, Welcome</span>
-          <h1 className='text-7xl leading-[4.5rem] font-black mt-10'>News about<br />the <span className='text-cyan-500'>React</span> world.</h1>
+          <h1 className='text-5xl sm:text-7xl leading-[3.5rem] sm:leading-[4.5rem] font-black mt-10'>News about<br />the <span className='text-cyan-500'>React</span> world.</h1>
           <p className='text-2xl leading-9 mt-6 mb-10'>Get acess to all the publications < br />
             <span className='text-cyan-500 font-bold'>for {amount} month</span>
           </p>
@@ -43,7 +43,9 @@ export default function Home({ product }: HomeProps) {
           <SubscribeButton priceId={product.priceId} />
         </section>
 
-        <Image src="/images/avatar.svg" alt="Girl coding" width={334} height={520} className='' />
+        <section className='max-w-[334px] mt-20 '>
+          <Image src="/images/avatar.svg" alt="Girl coding" width={334} height={520} className='relative max-sm:bottom-10 '/>
+        </section>
       </main>
     </>
   );

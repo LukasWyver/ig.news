@@ -18,6 +18,13 @@
   header nav .menu.active::after{
     @apply content-[''] h-[3px] w-full absolute bottom-px left-0 rounded-t bg-yellow-500;
   }
+
+  .post__content {
+    @apply mt-8 text-lg leading-8 space-y-6 text-gray-500 dark:text-gray-300;
+  }
+  .post__content.preview {
+    @apply bg-gradient-to-b from-gray-500 dark:from-gray-300 bg-clip-text;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -36,18 +43,21 @@
   }
 }
 
+.preview{
+  -webkit-text-fill-color: transparent;
+}
 
-article div#post__content ul,
-article div#post__content ol {
+article div.post__content ul,
+article div.post__content ol {
   padding-left: 1.5rem;
 }
 
-article div#post__content ul li,
-article div#post__content ol li {
+article div.post__content ul li,
+article div.post__content ol li {
   margin: 1rem 0;
 }
 
-article div#post__content a {
+article div.post__content a {
   text-decoration: none;
   color: #04D361;
 }
