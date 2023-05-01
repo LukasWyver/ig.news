@@ -41,6 +41,7 @@ export default async function webhooks(
         process.env.STRIPE_WEBHOOK_SECRET
       );
     } catch (error) {
+      console.log(error.message);
       return res.status(400).send(`Webhook error: ${error.message}`);
     }
 
@@ -75,6 +76,7 @@ export default async function webhooks(
             throw new Error('Unhandled event.');
         }
       } catch (error) {
+        console.log(error.message);
         return res.json({ error: 'Webhook handler failed.' });
       }
     }
