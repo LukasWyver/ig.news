@@ -10,6 +10,7 @@
     "stripe": "stripe listen --forward-to localhost:3000/api/webhooks"
   },
   "dependencies": {
+    "@prismicio/client": "^4",
     "@stripe/stripe-js": "^1.52.1",
     "@types/node": "18.16.0",
     "@types/react": "18.0.38",
@@ -22,6 +23,7 @@
     "next": "13.3.1",
     "next-auth": "^4.22.1",
     "postcss": "8.4.23",
+    "prismic-dom": "^2.2.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
@@ -31,6 +33,7 @@
   },
   "devDependencies": {
     "@types/next-auth": "^3.15.0",
+    "@types/prismic-dom": "^2.1.1",
     "prettier": "^2.8.8"
   }
 }
