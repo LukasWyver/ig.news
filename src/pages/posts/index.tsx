@@ -36,7 +36,7 @@ export default function Posts({ posts }: PostsProps) {
               slug={post.slug}
               title={post.title}
               updatedAt={post.updatedAt}
-              excerpt={limitLines(post.excerpt,4.5)}
+              excerpt={limitLines(post.excerpt, 4.5)}
             />
           ))}
         </div>
@@ -75,6 +75,9 @@ export const getStaticProps: GetStaticProps = async () => {
   });
 
   return {
-    props: { posts },
+    props: {
+      posts,
+    },
+    revalidate: 60 * 30, // 30 minutes
   };
 };
