@@ -10,7 +10,7 @@ export function ActiveLink({ href, title, ...rest }: ActiveLinkProps) {
   const { asPath } = useRouter();
 
   return (
-    <Link href={href} className={`menu ${asPath === href && 'active'}`}>
+    <Link href={href} className={`menu ${asPath === href && 'active'}`} {...rest}>
       {title}
     </Link>
   );

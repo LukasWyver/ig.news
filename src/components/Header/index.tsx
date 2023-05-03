@@ -38,7 +38,7 @@ export function Header() {
           </Link>
 
           <nav className="sm:ml-20 h-20">
-            <ActiveLink href="/" title="Home" />
+            <ActiveLink href="/" title="Home"/>
             <ActiveLink href="/posts" title="Posts" />
           </nav>
         </div>
