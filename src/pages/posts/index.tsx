@@ -53,6 +53,7 @@ export const getStaticProps: GetStaticProps = async () => {
     {
       fetch: ['posts.title', 'posts.content'],
       pageSize: 100,
+      orderings: '[document.first_publication_date desc]',
     }
   );
 

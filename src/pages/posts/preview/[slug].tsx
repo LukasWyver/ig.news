@@ -46,7 +46,7 @@ export default function PostPreview({ post }: PostPreviewProps) {
             dangerouslySetInnerHTML={{ __html: post.content }}
             className="post__content preview"
           />
-          <div className="p-8 h-20 w-full border-none rounded-full flex items-center justify-center bg-gray-100/75 dark:bg-shape-500 text-gray-700 dark:text-white text-xl text-center font-bold mt-16 mb-8 transition-all duration-200 hover:brightness-105 dark:hover:brightness-[0.8]">
+          <div className="p-8 h-20 w-full border-none rounded-full flex flex-col sm:flex-row items-center justify-center bg-gray-100/75 dark:bg-shape-500 text-gray-700 dark:text-white text-lg sm:text-xl text-center font-bold mt-16 mb-8 transition-all duration-200 hover:brightness-105 dark:hover:brightness-[0.8]">
             Wanna continue reading?
             <Link href="/" className="text-yellow-500 ml-2">
               Subscribe now 🤗
