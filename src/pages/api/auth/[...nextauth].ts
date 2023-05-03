@@ -47,7 +47,7 @@ export default NextAuth({
       }
     },
 
-    async signIn({ user, account, profile }) {
+    async signIn({ user }) {
       const { email } = user;
 
       try {
@@ -69,5 +69,4 @@ export default NextAuth({
       }
     },
   },
-  secret: process.env.NEXTAUTH_SECRET
 });
